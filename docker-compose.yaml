@@ -6,7 +6,7 @@ services:
     build: ./judgehost
     container_name: judge-host
     ports:
-      - "0:8964"
+      - "8964:8964"
     environment:
       - JUDGE_API=http://go-judge:5050
     depends_on:

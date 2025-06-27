@@ -9,4 +9,4 @@ COPY ./hostapp /opt/app
 
 WORKDIR /opt/app
 EXPOSE 8000
-CMD ["gunicorn", "main:app", "-k", "uvicorn.workers.UvicornWorker", "--workers", "4", "--bind", "0.0.0.0:8964"]
+CMD ["gunicorn", "main:app", "-k", "uvicorn.workers.UvicornWorker", "--workers", "1", "--bind", "0.0.0.0:8964"]

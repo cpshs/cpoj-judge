@@ -1,0 +1,20 @@
+{
+  "id": "sub123",
+  "task": {
+    "cmd": [
+      {
+        "args": [
+          "python3",
+          "main.py"
+        ],
+        "copyIn": {
+          "main.py": {
+            "content": "print(\"Hello World\")"
+          }
+        },
+        "cpuLimit": 1000000000,
+        "memoryLimit": 67108864
+      }
+    ]
+  }
+}
