@@ -1,0 +1,1 @@
+FROM criyle/go-judge

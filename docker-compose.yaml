@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+
+  app:
+    build: ./judgehost
+    container_name: judge-host
+    ports:
+      - "0:8964"
+    environment:
+      - JUDGE_API=http://go-judge:5050
+    depends_on:
+      - go-judge
+    networks:
+      - backend
+
+  go-judge:
+    build: ./gojudge
+    container_name: go-judge
+    privileged: true
+    volumes:
+      - judge_data:/data
+    networks:
+      - backend
+
+volumes:
+  judge_data:
+
+networks:
+  backend:
+    driver: bridge
