@@ -6,6 +6,7 @@ COPY ./requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 COPY ./hostapp /opt/app
+RUN mkdir /problems/
 
 WORKDIR /opt/app
 EXPOSE 8000
